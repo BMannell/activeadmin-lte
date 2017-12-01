@@ -177,7 +177,7 @@ module ActiveAdmin
             if @options.has_key?(:class)
               html_classes << @options.delete(:class)
             elsif @title.present?
-              html_classes << "col-#{@title.to_s.parameterize('_')}"
+              html_classes << "col-#{@title.to_s.parameterize(seperator: '_')}"
             end
             @html_class = html_classes.join(' ')
             @data = args[1] || args[0]
